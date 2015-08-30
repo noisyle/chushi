@@ -36,7 +36,19 @@ a, a:hover, a:focus, a:active, a.active {
 #local>li:hover>a{
 	color: #ffd619;
 }
-
+.navbar {
+	padding-top:10px;
+	padding-bottom:10px;
+}
+@media screen and (max-width:767px){
+	body {
+		margin-top: 50px;
+	}
+	.navbar {
+		padding-top:0;
+		padding-bottom:0;
+	}
+}
 #navbar li>a{
 	color: white;
 	background-color: black;
@@ -70,7 +82,7 @@ footer ul.quicklinks {
 </head>
 
 <body ng-app="mainApp">
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:black;border-bottom:0;padding-top:10px;padding-bottom:10px;">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:black;border-bottom:0;">
   <div class="container">
 	<div class="navbar-header">
 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -80,7 +92,7 @@ footer ul.quicklinks {
 		<span class="icon-bar"></span>
 	  </button>
 	  <a class="navbar-brand hidden-xs" href="#/" style="padding-top:0;">
-	  	<img src="http://www.chushi007.com/images/icon-logo.png" style="height:49px;"></img>
+	  	<img src="static/site/img/logo.png" style="height:49px;"></img>
 	  </a>
 	  <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#/">
 	  	<p>好厨师</p>
@@ -202,10 +214,6 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-weight: 700;
 }
-p {
-    font-size: 14px;
-    line-height: 1.75;
-}
 .text-muted {
     color: #777;
 }
@@ -235,6 +243,10 @@ section h3.section-subheading {
 .service img {
     margin: 0 auto;
     border: 7px solid #fff;
+}
+section .p {
+    font-size: 14px;
+    line-height: 1.75;
 }
 .service-heading {
     margin: 15px 0;
@@ -332,7 +344,7 @@ section h3.section-subheading {
             </div>
             <div class="row">
                 <div class="col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="#/cook" class="portfolio-link" data-toggle="modal">
                         <img src="static/site/img/athome.jpg" class="img-responsive">
                     </a>
                     <div class="portfolio-caption">
@@ -341,7 +353,7 @@ section h3.section-subheading {
                     </div>
                 </div>
                 <div class="col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="#/party" class="portfolio-link" data-toggle="modal">
                         <img src="static/site/img/party.jpg" class="img-responsive">
                     </a>
                     <div class="portfolio-caption">
@@ -388,6 +400,9 @@ section {
     padding: 50px 0;
 }
 }
+section .container{
+	 max-width:767px;
+}
 section h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -405,6 +420,9 @@ section h3.section-subheading {
     text-transform: none;
     font-size: 24px;
     font-weight: 400;
+}
+.service{
+	margin-top:10px;
 }
 .service>a.active,.service>a.active:focus,.service>a.active:active{
 	color: #fff;
@@ -431,7 +449,7 @@ form button.submit:hover,form button.submit:focus,form button.submit:active{
     <div class="container">
         <div class="row">
             <div class="">
-                <h4 class="service-heading">套餐</h4>
+                <h4 class="service-heading"><i class="fa fa-cutlery"></i> 套餐</h4>
             </div>
         </div>
         <div class="row">
@@ -451,7 +469,7 @@ form button.submit:hover,form button.submit:focus,form button.submit:active{
     <div class="container">
         <div class="row">
             <div class="">
-                <h4 class="service-heading">食材</h4>
+                <h4 class="service-heading"><i class="fa fa-cutlery"></i> 食材</h4>
             </div>
         </div>
         <div class="row">
@@ -468,11 +486,11 @@ form button.submit:hover,form button.submit:focus,form button.submit:active{
     <div class="container">
         <div class="row">
             <div class="">
-                <h4 class="service-heading">用餐信息</h4>
+                <h4 class="service-heading"><i class="fa fa-cutlery"></i> 用餐信息</h4>
             </div>
         </div>
         <div class="row">
-<form class="form-horizontal" style="max-width:767px;">
+<form class="form-horizontal">
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">姓名</label>
     <div class="col-sm-4">
@@ -524,6 +542,9 @@ section {
     padding: 50px 0;
 }
 }
+section .container{
+	 max-width:767px;
+}
 section h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -541,6 +562,9 @@ section h3.section-subheading {
     text-transform: none;
     font-size: 24px;
     font-weight: 400;
+}
+.service{
+	margin-top:10px;
 }
 .service>a.active,.service>a.active:focus,.service>a.active:active{
 	color: #fff;
@@ -567,7 +591,7 @@ form button.submit:hover,form button.submit:focus,form button.submit:active{
     <div class="container">
         <div class="row">
             <div class="">
-                <h4 class="service-heading">套餐</h4>
+                <h4 class="service-heading"><i class="fa fa-cutlery"></i> 套餐</h4>
             </div>
         </div>
         <div class="row">
@@ -590,15 +614,27 @@ form button.submit:hover,form button.submit:focus,form button.submit:active{
     <div class="container">
         <div class="row">
             <div class="">
-                <h4 class="service-heading">自选物品</h4>
+                <h4 class="service-heading"><i class="fa fa-cutlery"></i> 自选物品</h4>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-3 service">
-				<a href="javascript:;" class="btn btn-default btn-lg" role="button" ng-class="{active:purchase==false}" ng-click="purchase=false">自备食材</a>
+				<a href="javascript:;" class="btn btn-default btn-lg" role="button" ng-class="{active:custom.tablegame==true}" ng-click="custom.tablegame=!custom.tablegame">桌游</a>
             </div>
             <div class="col-sm-3 service">
-				<a href="javascript:;" class="btn btn-default btn-lg" role="button" ng-class="{active:purchase==true}" ng-click="purchase=true">厨师代买食材</a>
+				<a href="javascript:;" class="btn btn-default btn-lg" role="button" ng-class="{active:custom.projector==true}" ng-click="custom.projector=!custom.projector">投影</a>
+            </div>
+            <div class="col-sm-3 service">
+				<a href="javascript:;" class="btn btn-default btn-lg" role="button" ng-class="{active:custom.stereo==true}" ng-click="custom.stereo=!custom.stereo">音响</a>
+            </div>
+            <div class="col-sm-3 service">
+				<a href="javascript:;" class="btn btn-default btn-lg" role="button" ng-class="{active:custom.videogame==true}" ng-click="custom.videogame=!custom.videogame">游戏机</a>
+            </div>
+            <div class="col-sm-3 service">
+				<a href="javascript:;" class="btn btn-default btn-lg" role="button" ng-class="{active:custom.clothes==true}" ng-click="custom.clothes=!custom.clothes">服装</a>
+            </div>
+            <div class="col-sm-9 service" style="padding-top:12px;">
+				<input type="text" class="form-control" placeholder="备注" ng-model="custom.remark" />
             </div>
         </div>
     </div>
@@ -607,11 +643,11 @@ form button.submit:hover,form button.submit:focus,form button.submit:active{
     <div class="container">
         <div class="row">
             <div class="">
-                <h4 class="service-heading">用餐信息</h4>
+                <h4 class="service-heading"><i class="fa fa-cutlery"></i> 用餐信息</h4>
             </div>
         </div>
         <div class="row">
-<form class="form-horizontal" style="max-width:767px;">
+<form class="form-horizontal">
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">姓名</label>
     <div class="col-sm-4">
@@ -679,6 +715,7 @@ mainApp.controller('CookController', function($scope, $location, $rootScope) {
 mainApp.controller('PartyController', function($scope, $location, $rootScope) {
 	$rootScope.menu = "party";
 	$scope.style=1;
+	$scope.custom={tablegame:false,projector:false,stereo:false,videogame:false,clothes:false,remark:""};
 });
 mainApp.controller('MemberController', function($scope, $location, $rootScope) {
 	$rootScope.menu = "member";
