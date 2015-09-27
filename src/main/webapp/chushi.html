@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>厨师到家</title>
+  <title>Cooking</title>
   <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
   <!--[if lt IE 9]>
@@ -13,7 +13,6 @@
   <![endif]-->
 <style>
 body {
-	margin-top: 70px;
 	font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
 	font-size: 14px;
 	color: #333;
@@ -31,27 +30,21 @@ a, a:hover, a:focus, a:active, a.active {
 
 #local>li>a{
 	color: white;
-	background-color: black;
 }
 #local>li:hover>a{
 	color: #ffd619;
 }
+#local>li.open>a{
+	background-color: transparent;
+}
 .navbar {
 	padding-top:10px;
 	padding-bottom:10px;
-}
-@media screen and (max-width:767px){
-	body {
-		margin-top: 50px;
-	}
-	.navbar {
-		padding-top:0;
-		padding-bottom:0;
-	}
+	background-color:transparent;
+	border-bottom:0;
 }
 #navbar li>a{
 	color: white;
-	background-color: black;
 	border-radius: 3px;
 }
 #navbar li:hover>a{
@@ -60,6 +53,19 @@ a, a:hover, a:focus, a:active, a.active {
 #navbar li.active>a{
 	background-color: #ffd619;
 	color: white;
+}
+@media screen and (max-width:767px){
+	body {
+		margin-top: 50px;
+	}
+	.navbar {
+		padding-top:0;
+		padding-bottom:0;
+		background-color: white;
+	}
+	#navbar li>a{
+		color: gray;
+	}
 }
 footer {
     padding: 25px 0;
@@ -82,7 +88,7 @@ footer ul.quicklinks {
 </head>
 
 <body ng-app="mainApp">
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:black;border-bottom:0;">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
 	<div class="navbar-header">
 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -95,7 +101,7 @@ footer ul.quicklinks {
 	  	<img src="static/site/img/logo.png" style="height:49px;"></img>
 	  </a>
 	  <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#/">
-	  	<p>好厨师</p>
+	  	<p>Cooking</p>
 	  </a>
       <ul id="local" class="nav navbar-nav hidden-xs">
         <li class="dropdown">
@@ -129,7 +135,7 @@ footer ul.quicklinks {
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <span class="copyright">©2015 厨师到家</span>
+                <span class="copyright">©2015 Cooking</span>
             </div>
             <div class="col-md-6 col-md-offset-2">
                 <ul class="list-inline quicklinks">
@@ -168,8 +174,8 @@ header .intro-text {
 }
 @media screen and (min-width: 768px) {
 	header .intro-text {
-	    padding-top: 300px;
-	    padding-bottom: 200px;
+	    padding-top: 180px;
+	    padding-bottom: 80px;
 	}
 }
 header .intro-text .intro-lead-in {
@@ -209,6 +215,7 @@ header .intro-text .intro-heading {
     border-radius: 3px;
     font-size: 18px;
     padding: 20px 40px;
+    margin: 0 10px;
 }
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
@@ -221,11 +228,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #f7f7f7;
 }
 section {
-    padding: 100px 0;
+    padding: 30px 0;
 }
 @media screen and (min-width: 768px) {
 section {
-    padding: 150px 0;
+    padding: 50px 0;
 }
 }
 section h2.section-heading {
@@ -252,50 +259,12 @@ section .p {
     margin: 15px 0;
     text-transform: none;
 }
-#portfolio * {
-    z-index: 2;
+.portfolio {
+    color: #ffae00;
 }
-#portfolio .portfolio-item {
-    margin: 0 0 15px;
-    right: 0;
-}
-@media screen and (min-width: 767px) {
-#portfolio .portfolio-item {
-    margin: 0 0 30px;
-}
-}
-#portfolio .portfolio-item .portfolio-link {
-    display: block;
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
-}
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-    background: rgba(254,209,54,.9);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all ease .5s;
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-}
-#portfolio .portfolio-item .portfolio-caption {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    text-align: center;
-    padding: 25px;
-}
-#portfolio .portfolio-item .portfolio-caption h4 {
-    text-transform: none;
-    margin: 0;
-}
-#portfolio .portfolio-item .portfolio-caption p {
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-style: italic;
+.portfolio p {
     font-size: 16px;
-    margin: 0;
+    line-height: 30px;
 }
 </style>
 <header>
@@ -303,7 +272,8 @@ section .p {
         <div class="intro-text">
             <div class="intro-lead-in">Welcome To Our Studio!</div>
             <div class="intro-heading">It's Nice To Meet You</div>
-            <a href="#services" class="page-scroll btn btn-xl">立即预定</a>
+            <a href="#/cook" class="btn btn-xl">厨师服务预定</a>
+            <a href="#/party" class="btn btn-xl">PARTY预定</a>
         </div>
     </div>
 </header>
@@ -311,84 +281,116 @@ section .p {
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">套餐</h2>
-                <h3 class="section-subheading text-muted">文案还是要好好想一想的……</h3>
+                <h2 class="section-heading">厨师服务为您提供以下用餐类型</h2>
+                <h3 class="section-subheading text-muted"></h3>
             </div>
         </div>
         <div class="row text-center">
             <div class="col-md-4 service">
                 <img src="static/site/img/four.jpg" class="img-responsive img-circle">
                 <h4 class="service-heading">四菜一汤</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                <p class="text-muted"></p>
             </div>
             <div class="col-md-4 service">
                 <img src="static/site/img/four.jpg" class="img-responsive img-circle">
                 <h4 class="service-heading">六菜一汤</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                <p class="text-muted"></p>
             </div>
             <div class="col-md-4 service">
                 <img src="static/site/img/four.jpg" class="img-responsive img-circle">
                 <h4 class="service-heading">八菜一汤</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                <p class="text-muted"></p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4 service">
+                <img src="static/site/img/four.jpg" class="img-responsive img-circle">
+                <h4 class="service-heading">家宴定制</h4>
+                <p class="text-muted"></p>
+            </div>
+            <div class="col-md-4 service">
+                <img src="static/site/img/four.jpg" class="img-responsive img-circle">
+                <h4 class="service-heading">生日定制</h4>
+                <p class="text-muted"></p>
+            </div>
+            <div class="col-md-4 service">
+                <img src="static/site/img/four.jpg" class="img-responsive img-circle">
+                <h4 class="service-heading">特别定制</h4>
+                <p class="text-muted"></p>
             </div>
         </div>
     </div>
 </section>
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">定制</h2>
-                    <h3 class="section-subheading text-muted">图片先凑合看吧……</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 portfolio-item">
-                    <a href="#/cook" class="portfolio-link" data-toggle="modal">
-                        <img src="static/site/img/athome.jpg" class="img-responsive">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>家宴定制</h4>
-                        <p class="text-muted">Blah blah blah...</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 portfolio-item">
-                    <a href="#/party" class="portfolio-link" data-toggle="modal">
-                        <img src="static/site/img/party.jpg" class="img-responsive">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Party定制</h4>
-                        <p class="text-muted">Blah blah blah...</p>
-                    </div>
-                </div>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">PARTY定制为您提供以下设计类型</h2>
+                <h3 class="section-subheading text-muted"></h3>
             </div>
         </div>
-    </section>
-<section class="bg-light-gray">
-    <div class="container">
         <div class="row text-center">
-            <div class="col-md-3 service">
-                <img src="static/site/img/four.jpg" class="img-responsive img-circle">
+            <div class="col-md-6 service">
+                <img src="static/site/img/party.jpg" class="img-responsive">
                 <h4 class="service-heading">简约</h4>
             </div>
-            <div class="col-md-3 service">
-                <img src="static/site/img/four.jpg" class="img-responsive img-circle">
+            <div class="col-md-6 service">
+                <img src="static/site/img/party.jpg" class="img-responsive">
                 <h4 class="service-heading">复古</h4>
             </div>
-            <div class="col-md-3 service">
-                <img src="static/site/img/four.jpg" class="img-responsive img-circle">
+        </div>
+        <div class="row text-center">
+            <div class="col-md-6 service">
+                <img src="static/site/img/party.jpg" class="img-responsive">
                 <h4 class="service-heading">华丽</h4>
             </div>
-            <div class="col-md-3 service">
-                <img src="static/site/img/four.jpg" class="img-responsive img-circle">
+            <div class="col-md-6 service">
+                <img src="static/site/img/party.jpg" class="img-responsive">
                 <h4 class="service-heading">小清新</h4>
             </div>
         </div>
     </div>
 </section>
+    <section class="portfolio bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <img src="static/site/img/loack.png" class="img-responsive center-block">
+                    <div>
+                        <h3>安全保障</h3>
+                        <p>专业厨师，资质齐全确<br />保安全卫生高品质</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="static/site/img/fuwu.png" class="img-responsive center-block">
+                    <div>
+                        <h3>服务保障</h3>
+                        <p>完善的团队，严格的管理<br />清晰的工作流程，确保服务到位</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="static/site/img/kefu.png" class="img-responsive center-block">
+                    <div>
+                        <h3>客服保障</h3>
+                        <p>客服全程跟进服务流程<br />了解您的需求，随时答疑解惑</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="static/site/img/tiexin.png" class="img-responsive center-block">
+                    <div>
+                        <h3>贴心服务</h3>
+                        <p>上门服务统一整洁着装<br />做完菜后将台面收拾整理</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </script>
 <script type="text/ng-template" id="cook.html">
 <style>
+body {
+	margin-top: 70px;
+}
 .bg-light-gray {
     background-color: #f7f7f7;
 }
@@ -531,6 +533,9 @@ form button.submit:hover,form button.submit:focus,form button.submit:active{
 </script>
 <script type="text/ng-template" id="party.html">
 <style>
+body {
+	margin-top: 70px;
+}
 .bg-light-gray {
     background-color: #f7f7f7;
 }
@@ -687,9 +692,19 @@ form button.submit:hover,form button.submit:focus,form button.submit:active{
 </section>
 </script>
 <script type="text/ng-template" id="member.html">
+<style>
+body {
+	margin-top: 70px;
+}
+</style>
 会员中心
 </script>
 <script type="text/ng-template" id="aboutus.html">
+<style>
+body {
+	margin-top: 70px;
+}
+</style>
 关于我们
 </script>
 <script>

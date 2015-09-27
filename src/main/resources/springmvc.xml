@@ -11,5 +11,16 @@
 	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<mvc:resources mapping="/**" location="/" />
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<mvc:annotation-driven />
 	<context:component-scan base-package="com.noisyle.chushi.controller" />
+	
+	<mvc:interceptors>
+		<!-- Controller拦截器 -->
+		<bean class="com.noisyle.crowbar.core.interceptor.WebHandlerInterceptor" />
+	</mvc:interceptors>
 </beans>
