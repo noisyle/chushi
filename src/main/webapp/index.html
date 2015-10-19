@@ -110,6 +110,8 @@ $routeProvider
   .when('/custom', {templateUrl: 'custom.html', controller: 'CustomController'})
   .when('/party', {templateUrl: 'party.html', controller: 'PartyController'})
   .when('/partyOrder', {templateUrl: 'partyOrder.html', controller: 'PartyOrderController'})
+  .when('/member', {templateUrl: 'member.html', controller: 'MemberController'})
+  .when('/aboutus', {templateUrl: 'aboutus.html', controller: 'AboutUsController'})
   .otherwise({redirectTo: '/'});
 }]);
 mainApp.controller('HomeController', function($scope, $http) {
@@ -148,6 +150,10 @@ mainApp.controller('PartyController', function($scope, $http, $location) {
 mainApp.controller('PartyOrderController', function($scope, $http) {
 	var img = 'static/site/images/cook/p1.jpg';
 	$scope.item = {img:img,price:'25',name:'宫保鸡丁',text:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit'};
+});
+mainApp.controller('MemberController', function($scope, $http) {
+});
+mainApp.controller('AboutUsController', function($scope, $http) {
 });
 mainApp.controller('HeaderController', function($scope, $rootScope) {
   $rootScope.$on('$routeChangeSuccess', function(evt, current, previous) {
