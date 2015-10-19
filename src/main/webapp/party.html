@@ -27,10 +27,12 @@
 				<div class="content_box-grid col-xs-8">
 					<p class="content_text" ng-bind="item.name"></p>
 					<p class="content_text" ng-bind="item.text"></p>
-					<div class="price">
-						<span class="actual" ng-bind="item.price|currency:'￥'"></span>
+					<div class="col-xs-12 clearfix">
+						<div class="btn1 pull-right" ng-click="order()">立即预约</div>
+						<div class="price pull-right">
+							<span class="actual" ng-bind="item.price|currency:'￥'"></span>
+						</div>
 					</div>
-					<div class="btn1" ng-click="order()">立即预约</div>
 				</div>
 			</div>
 		</div>
