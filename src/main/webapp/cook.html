@@ -33,17 +33,17 @@
 					</select>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-3 content_item" ng-repeat="item in items">
-					<div class="content_box row">
-						<img ng-src="{{item.img}}" class="img-responsive col-xs-4 col-md-12" alt="">
-						<div class="content_box-grid col-xs-8 col-md-12">
-							<p class="content_text" ng-bind="item.name"></p>
-							<div class="price">
-								<span class="actual" ng-bind="item.price|currency:'￥'"></span>/份
-							</div>
-							<div class="btn1">加入购物车</div>
-						</div>
+			<div class="row content_box itemset" ng-repeat="set in sets track by $index">
+				<div class="col-sm-3 item" ng-repeat="item in set.items track by $index">
+					<img ng-src="{{item.img}}" class="img-responsive" alt="">
+					<div class="content_box-grid">
+						<p class="content_text" ng-bind="item.name"></p>
+					</div>
+				</div>
+				<div class="col-xs-12 clearfix">
+					<div class="btn1 pull-right">立即预约</div>
+					<div class="price pull-right">
+						<span class="actual" ng-bind="set.price|currency:'￥'"></span>/份
 					</div>
 				</div>
 			</div>

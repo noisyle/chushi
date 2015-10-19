@@ -115,11 +115,15 @@ $routeProvider
 mainApp.controller('HomeController', function($scope, $http) {
 });
 mainApp.controller('CookController', function($scope, $http) {
-	$scope.items = [];
-	var names = ['宫保鸡丁','鱼香鸡丝'];
-	for(var i=1;i<=10;i++){
-		var img = 'static/site/images/cook/p'+(i%8+1)+'.jpg';
-		$scope.items.push({img:img,price:i,name:names[i%names.length]});
+	$scope.sets = [];
+	var names = ['宫保鸡丁','鱼香鸡丝','西红柿炒鸡蛋'];
+	for(var i=1;i<=5;i++){
+		var items = [];
+		for(var j=1;j<=(i%4+3);j++){
+			var img = 'static/site/images/cook/p'+(j%8+1)+'.jpg';
+			items.push({img:img,name:names[j%names.length]});
+		}
+		$scope.sets.push({items:items,price:i});
 	}
 });
 mainApp.controller('CustomController', function($scope, $http) {

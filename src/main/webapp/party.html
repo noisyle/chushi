@@ -21,16 +21,16 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-12 content_item" ng-repeat="item in items">
+		<div class="col-xs-12" ng-repeat="item in items">
 			<div class="content_box row">
 				<img ng-src="{{item.img}}" class="img-responsive col-xs-4" alt="">
 				<div class="content_box-grid col-xs-8">
 					<p class="content_text" ng-bind="item.name"></p>
 					<p class="content_text" ng-bind="item.text"></p>
 					<div class="price">
-						<span class="actual" ng-bind="item.price|currency:'￥'"></span>/份
+						<span class="actual" ng-bind="item.price|currency:'￥'"></span>
 					</div>
-					<div class="btn1" ng-click="order()">预定</div>
+					<div class="btn1" ng-click="order()">立即预约</div>
 				</div>
 			</div>
 		</div>

@@ -219,8 +219,16 @@ ul.category li a:hover{
 	-o-border-radius: 0.3em;
 	background:#fff;
 	border: 1px solid #D2CF99;
+	margin: 0 0 20px 0;
 }
-.content_box>img{
+.content_box.itemset{
+	padding: 10px;
+}
+.content_box.itemset>.item{
+	padding: 0;
+	margin: 0;
+}
+.content_box img{
 	padding: 0;
 }
 .content_box-grid{
@@ -234,22 +242,19 @@ p.content_text{
 }
 .price{
 	font-size:0.8125em;
+	margin-top: 5px;
+	margin-right: 15px;
 }
 span.actual {
 	color: #008180;
 	font-size:1em;
 	font-weight:bold;
+	line-height: 23px;
 }
 ul.product_but{
 	padding:0;
 	list-style:none;
 	margin-top: 0.7em;
-}
-.content_item{
-	margin-bottom: 20px;
-}
-.content_box{
-	margin: 0;
 }
 .content_box .btn1{
 	margin-top: 5px;
