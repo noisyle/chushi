@@ -32,7 +32,7 @@
 	  <ul class="nav navbar-nav">
         <li class="dropdown">
           <a href="/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          	<i class="glyphicon glyphicon-map-marker" style="color:#ffd619"></i> 成都 <span class="caret"></span>
+          	<i class="glyphicon glyphicon-map-marker"></i> 成都 <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><a href="#">成都</a></li>
@@ -45,8 +45,9 @@
 	  </ul>
 	  <ul class="nav navbar-nav navbar-right">
 		<li ng-class="{active:path=='/'}"><a href="#/">首页</a></li>
-		<li ng-class="{active:path=='/cool'}"><a href="#/cook">厨师服务</a></li>
-		<li ng-class="{active:path=='/parth'}"><a href="#/party">Party服务</a></li>
+		<li ng-class="{active:path=='/cook'}"><a href="#/cook">推荐套餐</a></li>
+		<li ng-class="{active:path=='/custom'}"><a href="#/custom">自选套餐</a></li>
+		<li ng-class="{active:path=='/party'}"><a href="#/party">Party服务</a></li>
 		<li ng-class="{active:path=='/member'}"><a href="#/member">会员中心</a></li>
 		<li ng-class="{active:path=='/aboutus'}"><a href="#/aboutus">关于我们</a></li>
 	  </ul>
@@ -106,6 +107,7 @@ mainApp.config(['$routeProvider', function($routeProvider) {
 $routeProvider
   .when('/', {templateUrl: 'home.html', controller: 'HomeController'})
   .when('/cook', {templateUrl: 'cook.html', controller: 'CookController'})
+  .when('/custom', {templateUrl: 'custom.html', controller: 'CustomController'})
   .when('/party', {templateUrl: 'party.html', controller: 'PartyController'})
   .when('/partyOrder', {templateUrl: 'partyOrder.html', controller: 'PartyOrderController'})
   .otherwise({redirectTo: '/'});
@@ -113,6 +115,14 @@ $routeProvider
 mainApp.controller('HomeController', function($scope, $http) {
 });
 mainApp.controller('CookController', function($scope, $http) {
+	$scope.items = [];
+	var names = ['宫保鸡丁','鱼香鸡丝'];
+	for(var i=1;i<=10;i++){
+		var img = 'static/site/images/cook/p'+(i%8+1)+'.jpg';
+		$scope.items.push({img:img,price:i,name:names[i%names.length]});
+	}
+});
+mainApp.controller('CustomController', function($scope, $http) {
 	$scope.items = [];
 	var names = ['宫保鸡丁','鱼香鸡丝'];
 	for(var i=1;i<=10;i++){
