@@ -106,17 +106,17 @@ body a{
 	padding-top: 1em;
 }
 .category_box{
-	box-shadow: 0 0px 0 5px #E8E5AD;
-	-webkit-box-shadow: 0 0px 0 5px #E8E5AD;
-	-moz-box-shadow: 0 0px 0 5px #E8E5AD;
-	-o-box-shadow: 0 0px 0 5px #E8E5AD;
+	box-shadow: 0 0px 0 5px #F0DEC6;
+	-webkit-box-shadow: 0 0px 0 5px #F0DEC6;
+	-moz-box-shadow: 0 0px 0 5px #F0DEC6;
+	-o-box-shadow: 0 0px 0 5px #F0DEC6;
 	background: #FFF;
 	border-radius: 0.3em;
 	-webkit-border-radius: 0.3em;
 	-moz-border-radius: 0.3em;
 	-o-border-radius: 0.3em;
 	background:#fff;
-	border:1px solid #d2cf99;
+	border:1px solid #703e26;
 	margin-bottom: 1em;
 }
 ul.category{
@@ -147,18 +147,18 @@ ul.category li a:hover{
 	list-style-image: url(../images/cook/marker.gif);
 }
 .fruit h3{
-	color: #6B6B6B;
+	color: #703e26;
 	font-size:1.3em;
 }
 .fruit p{
-	color: #6B6B6B;
+	color: #803e26;
 	font-size:0.85em;
 	line-height:1.5em;
 }
 .product-filter {
 	overflow: hidden;
 	line-height: 32px;
-	border: 1px solid #D3CB51;
+	border: 1px solid #803e26;
 	border-width: 1px 0;
 	padding: 20px 0;
 	margin:1em 0;
@@ -171,7 +171,7 @@ ul.category li a:hover{
 }
 .product-filter .sort b {
 	padding-right: 7px;
-	color: #6B6B6B;
+	color: #803e26;
 	text-transform: uppercase;
 	font-weight: 500;
 	font-size: 0.8125em;
@@ -179,7 +179,7 @@ ul.category li a:hover{
 .product-filter .sort select {
 	width: 140px;
 	font-size:0.8125em;
-	color: #6B6B6B;
+	color: #803e26;
 	font-weight: normal;
 	padding:5px;
 }
@@ -196,7 +196,7 @@ ul.category li a:hover{
 }
 .product-filter .limit b {
 	padding-right: 5px;
-	color: #6B6B6B;
+	color: #803e26;
 	font-size:0.8125em;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -204,21 +204,21 @@ ul.category li a:hover{
 .product-filter .limit select {
 	width: 72px;
 	font-size: 0.8125em;
-	color: #6B6B6B;
+	color: #803e26;
 	font-weight: normal;
 	padding:5px;
 }
 .content_box{
-	box-shadow: 0 0px 0 5px #E8E5AD;
-	-webkit-box-shadow: 0 0px 0 5px #E8E5AD;
-	-moz-box-shadow: 0 0px 0 5px #E8E5AD;
-	-o-box-shadow: 0 0px 0 5px #E8E5AD;
+	box-shadow: 0 0px 0 5px #F0DEC6;
+	-webkit-box-shadow: 0 0px 0 5px #F0DEC6;
+	-moz-box-shadow: 0 0px 0 5px #F0DEC6;
+	-o-box-shadow: 0 0px 0 5px #F0DEC6;
 	border-radius: 0.3em;
 	-webkit-border-radius: 0.3em;
 	-moz-border-radius: 0.3em;
 	-o-border-radius: 0.3em;
 	background:#fff;
-	border: 1px solid #D2CF99;
+	border: 1px solid #703e26;
 	margin: 0 0 20px 0;
 }
 .content_box.itemset{
